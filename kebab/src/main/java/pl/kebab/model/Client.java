@@ -4,22 +4,22 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
 @Entity
-public class User {
-
+public class Client {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
-    //@NotBlank(message = "Name is mandatory")
+    @NotBlank(message = "Name is mandatory")
     private String name;
-
-    //@NotBlank(message = "Email is mandatory")
+    @NotBlank(message = "Email is mandatory")
     private String email;
 
-    public User() {}
-    public User(long id, String name, String email) {
+    public Client() {
+    }
+
+    public Client(long id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;

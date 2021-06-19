@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KebabAppr {
+public class KebabApp {
     public static void main(String[] args) {
-        SpringApplication.run(KebabAppr.class, args);
+        SpringApplication.run(KebabApp.class, args);
     }
 }
